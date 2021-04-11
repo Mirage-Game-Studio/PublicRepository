@@ -1,10 +1,15 @@
 # User Manual
 
+**CONTENT**
+
+- Guide (Standard RP)
+- Guide (URP)
+- Guide (HDRP)
+- Glitch Effects
 
 
 
-
-## Standard Render Pipeline
+## Guide (Standard RP)
 
 #### Step 1. Create or open a Unity Project
 
@@ -28,7 +33,7 @@ The usage of Z Post-processing in build-in pipeline is the same as the Unity PPv
 
 
 
-## Universal Render Pipeline (URP)
+## Guide (URP)
 
 
 
@@ -75,7 +80,7 @@ The usage of Z Post-processing in build-in pipeline is the same as the Unity PPv
 
 
 
-## High Definition Render Pipeline (HDRP)
+## Guide (HDRP)
 
 #### Installation & Getting Started
 
@@ -110,7 +115,268 @@ Enjoy it. :D
 
 
 
+## Glitch Effects
 
+### Glitch Analog Noise
+
+
+
+<img src="https://raw.githubusercontent.com/Mirage-Game-Studio/PublicRepository/main/Z-Postprocessing/Images/Glitch/GlitchAnalogNoise.png"  align="middle" style="zoom:80%;" />
+
+| Property                   | Description                                                  |
+| -------------------------- | ------------------------------------------------------------ |
+| Noise Speed                | Determine how fast the noise flickering, in a range from 0 to 1. |
+| Noise Fading               | The fade amount to blend between normal and noise image, in a range from 0 to 1. |
+| Luminance Jitter Threshold | Only the pixels which luminance above this threshold will jitter, in a range from 0 to 1. |
+
+
+
+
+### Glitch Digital Stripe
+
+
+
+<img src="https://raw.githubusercontent.com/Mirage-Game-Studio/PublicRepository/main/Z-Postprocessing/Images/Glitch/GlitchDigitalStripe.png"  align="middle" style="zoom:80%;" />
+
+| Property                      | Description                                                  |
+| ----------------------------- | ------------------------------------------------------------ |
+| Intensity                     | Larger intensity will bring more jittering stripes, in a range from 0 to 1. |
+| Frequency                     | The frequency of digital stripes, in a range from 1 to 10.   |
+| Stripe Length                 | The Length of digital stripes, in a range from 0 to 0.99.    |
+| Need Stripe Color Adjust      | If you need adjust color of stripes, turn it on.             |
+| Stripe Color Adjust Color     | The adjustment color of stripes.                             |
+| Stripe Color Adjust Intensity | The intensity of the stripe color, in a range from 0 to 10.  |
+| Noise Texture Width           | The width of the noise texture, in a range from 8 to 256.    |
+| Noise Texture Height          | The height of the noise texture, in a range from 8 to 256.   |
+
+
+
+
+### Glitch Image Block
+
+
+
+<img src="https://raw.githubusercontent.com/Mirage-Game-Studio/PublicRepository/main/Z-Postprocessing/Images/Glitch/GlitchImageBlock.png"  align="middle" style="zoom:80%;" />
+
+| Property                | Description                                                  |
+| ----------------------- | ------------------------------------------------------------ |
+| Fade                    | The fade amount to blend between normal and noise image, in a range from 0 to 1. |
+| Speed                   | Determine how fast the noise blocks flickering, in a range from 0 to 1. |
+| Amount                  | The amount of the noise blocks, in a range from 0 to 10.     |
+| Block Layer 1_U         | The U (horizontal) factor to adjust generated noise blocks of the first layer, in a range from 0 to 50. |
+| Block Layer 1_V         | The V (vertical) factor to adjust generated noise blocks of the first layer, in a range from 0 to 50. |
+| Block Layer 2_U         | The U (horizontal) factor to adjust generated noise blocks of the second layer, in a range from 0 to 50. |
+| Block Layer 2_V         | The V (vertical) factor to adjust generated noise blocks of the second layer, in a range from 0 to 50. |
+| Block Layer 1_Intensity | The intensity factor of the first block layer, the larger the weaker, in a range from 0 to 50. |
+| Block Layer 2_Intensity | The intensity factor of the second block layer, the larger the weaker, in a range from 0 to 50. |
+| RGB Split Intensity     | The splitting strength of the RGB three color channels, in a range from 0 to 50. |
+| Block Visualize Debug   | The toggle to visualize the generated noise blocks.          |
+
+
+
+
+### Glitch Image Block V2
+
+
+
+<img src="https://raw.githubusercontent.com/Mirage-Game-Studio/PublicRepository/main/Z-Postprocessing/Images/Glitch/GlitchImageBlockV2.png"  align="middle" style="zoom:80%;" />
+
+| Property                | Description                                                  |
+| ----------------------- | ------------------------------------------------------------ |
+| Fade                    | The fade amount to blend between normal and noise image, in a range from 0 to 1. |
+| Speed                   | Determine how fast the noise blocks flickering, in a range from 0 to 1. |
+| Amount                  | The amount of the noise blocks, in a range from 0 to 10.     |
+| Block Layer 1_U         | The U (horizontal) factor to adjust generated noise blocks of the first layer, in a range from 0 to 50. |
+| Block Layer 1_V         | The V (vertical) factor to adjust generated noise blocks of the first layer, in a range from 0 to 50. |
+| Block Layer 1_Intensity | The intensity factor of the first block layer, the larger the weaker, in a range from 0 to 50. |
+| RGB Split Intensity     | The splitting strength of the RGB three color channels, in a range from 0 to 50. |
+| Block Visualize Debug   | The toggle to visualize the generated noise blocks.          |
+
+
+### Glitch Image Block V3
+
+
+
+<img src="https://raw.githubusercontent.com/Mirage-Game-Studio/PublicRepository/main/Z-Postprocessing/Images/Glitch/GlitchImageBlockV3.png"  align="middle" style="zoom:80%;" />
+
+| Property   | Description                                                  |
+| ---------- | ------------------------------------------------------------ |
+| Speed      | Determine how fast the noise blocks flickering, in a range from 0 to 50. |
+| Block Size | The property to adjust the block size, the larger the smaller, in a range from 0 to 50. |
+
+
+### Glitch Image Block V4
+
+
+
+<img src="https://raw.githubusercontent.com/Mirage-Game-Studio/PublicRepository/main/Z-Postprocessing/Images/Glitch/GlitchImageBlockV4.png"  align="middle" style="zoom:80%;" />
+
+| Property        | Description                                                  |
+| --------------- | ------------------------------------------------------------ |
+| Speed           | Determine how fast the noise blocks flickering, in a range from 0 to 50. |
+| Block Size      | The property to adjust the block size, the larger the smaller, in a range from 0 to 50. |
+| Max RGB Split X | The max splitting amount of RGB colors in horizontal direction. |
+| Max RGB Split Y | The max splitting amount of RGB colors in vertical direction. |
+
+
+### Glitch Line Block
+
+
+
+<img src="https://raw.githubusercontent.com/Mirage-Game-Studio/PublicRepository/main/Z-Postprocessing/Images/Glitch/GlitchLineBlock.png"  align="middle" style="zoom:80%;" />
+
+| Property        | Description                                                  |
+| --------------- | ------------------------------------------------------------ |
+| Block Direction | The property to determine the direction that blocks will fickering on, Horizontal or Vertical. |
+| Interval Type   | The interval mode that line blocks will appear. Infinite, Periodic or Random. |
+| Frequency       | The frequency of the line blocks, in a range from 0 to 25.   |
+| Amount          | The amount of the line blocks, in a range from 0 to 1.       |
+| Lines Width     | The width of the blocky lines, in a range from 0.1 to 10.    |
+| Speed           | Determine how fast the line blocks flickering, in a range from 0 to 50. |
+| Offset          | The offset of the glitchy blocks from the normal position, in a range from 0 to 13. |
+| Alpha           | The alpha or fading amount of the glitchy blocks, in a range from 0 to 1. |
+
+
+### Glitch RGB Split
+
+
+
+<img src="https://raw.githubusercontent.com/Mirage-Game-Studio/PublicRepository/main/Z-Postprocessing/Images/Glitch/GlitchRGBSplit.png"  align="middle" style="zoom:80%;" />
+
+| Property        | Description                                                  |
+| --------------- | ------------------------------------------------------------ |
+| Split Direction | The RGB splitting direction: Horizontal, Vectical or Horizontal_Vertical (aka Diagonal). |
+| Amount          | The offset amount of the RGB splitting, in a range from 0 to 5. |
+| Speed           | The animation speed of the RGB splitting, in a range from 0 to 10. |
+| Fading          | The fading amount of the RGB splitting, in a range from 0 to 1. |
+| Center Fading   | The fading amount to control the RGB splitting in the center of screen, in a range from 0 to 1. |
+| Amount R        | The offset amount of the splitting for only red color.       |
+| Amount B        | The offset amount of the splitting for only blue color.      |
+
+
+### Glitch RGB Split V2
+
+
+
+<img src="https://raw.githubusercontent.com/Mirage-Game-Studio/PublicRepository/main/Z-Postprocessing/Images/Glitch/GlitchRGBSplitV2.png"  align="middle" style="zoom:80%;" />
+
+| Property        | Description                                                  |
+| --------------- | ------------------------------------------------------------ |
+| Split Direction | The RGB splitting direction: Horizontal, Vectical or Horizontal_Vertical (aka Diagonal). |
+| Amount          | The offset amount of the RGB splitting, in a range from 0 to 1. |
+| Amplitude       | The amplitude of the RGB splitting, in a range from 1 to 6.  |
+| Speed           | The animation speed of the RGB splitting, in a range from 0 to 2. |
+
+
+### Glitch RGB Split V3
+
+
+
+<img src="https://raw.githubusercontent.com/Mirage-Game-Studio/PublicRepository/main/Z-Postprocessing/Images/Glitch/GlitchRGBSplitV3.png"  align="middle" style="zoom:80%;" />
+
+| Property        | Description                                                  |
+| --------------- | ------------------------------------------------------------ |
+| Split Direction | The RGB splitting direction: Horizontal, Vectical or Horizontal_Vertical (aka Diagonal). |
+| Interval Type   | The interval mode that the splitting will occur. Infinite, Periodic or Random. |
+| Frequency       | The frequency of the RGB splitting, in a range from 0.1 to 25. |
+| Amount          | The offset amount of the RGB splitting, in a range from 0 to 200. |
+| Speed           | The animation speed of the RGB splitting, in a range from 0 to 20. |
+
+
+### Glitch RGB Split V4
+
+
+
+<img src="https://raw.githubusercontent.com/Mirage-Game-Studio/PublicRepository/main/Z-Postprocessing/Images/Glitch/GlitchRGBSplitV4.png"  align="middle" style="zoom:80%;" />
+
+| Property        | Description                                                  |
+| --------------- | ------------------------------------------------------------ |
+| Split Direction | The RGB splitting direction: Horizontal, Vectical or Horizontal_Vertical (aka Diagonal). |
+| Intensity       | The strength of the RGB splitting, can be negative, in a range from -1 to 1. |
+| Speed           | The animation speed of the RGB splitting, in a range from 0 to 100. |
+
+
+### Glitch RGB Split V5
+
+
+
+<img src="https://raw.githubusercontent.com/Mirage-Game-Studio/PublicRepository/main/Z-Postprocessing/Images/Glitch/GlitchRGBSplitV5.png"  align="middle" style="zoom:80%;" />
+
+| Property  | Description                                                  |
+| --------- | ------------------------------------------------------------ |
+| Noise Tex | The noise texture is used to adjust the splitting amount.    |
+| Amplitude | The amplitude of the RGB splitting, in a range from 0 to 5.  |
+| Speed     | The animation speed of the RGB splitting, in a range from 0 to 1. |
+
+
+### Glitch Scan Line Jitter
+
+
+
+<img src="https://raw.githubusercontent.com/Mirage-Game-Studio/PublicRepository/main/Z-Postprocessing/Images/Glitch/GlitchScanLineJitter.png"  align="middle" style="zoom:80%;" />
+
+| Property         | Description                                                  |
+| ---------------- | ------------------------------------------------------------ |
+| Jitter Direction | The direction of the shaking lines, Horizontal or Vertical.  |
+| Jitter Intensity | The strength of the jittering, in a range from 0 to 1.       |
+| Interval Type    | The interval mode that shaking lines will appear. Infinite, Periodic or Random. |
+| Frequency        | Using this property to tune the frequency of jittering if you select Periodic or Random, in a range from 0 to 25. |
+
+
+### Glitch Screen Jump
+
+
+
+<img src="https://raw.githubusercontent.com/Mirage-Game-Studio/PublicRepository/main/Z-Postprocessing/Images/Glitch/GlitchScreenJump.png"  align="middle" style="zoom:80%;" />
+
+| Property              | Description                                               |
+| --------------------- | --------------------------------------------------------- |
+| Screen Jump Direction | The direction of the screen jump, Horizontal or Vertical. |
+| Screen Jump Intensity | The intensity of the screen jump, in a range from 0 to 1. |
+
+### Glitch Screen Shake
+
+
+
+<img src="https://raw.githubusercontent.com/Mirage-Game-Studio/PublicRepository/main/Z-Postprocessing/Images/Glitch/GlitchScreenShake.png"  align="middle" style="zoom:80%;" />
+
+| Property               | Description                                                |
+| ---------------------- | ---------------------------------------------------------- |
+| Screen Shake Direction | The direction of the screen shake, Horizontal or Vertical. |
+| Screen Shake Intensity | The intensity of the screen shake, in a range from 0 to 1. |
+
+### Glitch Tile Jitter
+
+
+
+<img src="https://raw.githubusercontent.com/Mirage-Game-Studio/PublicRepository/main/Z-Postprocessing/Images/Glitch/GlitchTileJitter.png"  align="middle" style="zoom:80%;" />
+
+| Property            | Description                                                  |
+| ------------------- | ------------------------------------------------------------ |
+| Splitting Direction | The splitting direction of the glitchy tiles, Horizontal or Vertical. |
+| Splitting Number    | The number of the splitting tiles, in a range from 0 to 50.  |
+| Interval Type       | The interval mode that glitchy tiles will jitter. Infinite, Periodic or Random. |
+| Frequency           | Using this property to tune the frequency of jittering if you select Periodic or Random for Interval Type, in a range from 0 to 25. |
+| Jitter Direction    | The jitter direction of splitting tiles, Horizontal or Vertical. |
+| Amount              | The offset amount of jittering tiles, in a range from 0 to 100. |
+| Speed               | The animation speed of the jitter, in a range from 0 to 1.   |
+
+### Glitch Wave Jitter
+
+
+
+<img src="https://raw.githubusercontent.com/Mirage-Game-Studio/PublicRepository/main/Z-Postprocessing/Images/Glitch/GlitchWaveJitter.png"  align="middle" style="zoom:80%;" />
+
+| Property          | Description                                                  |
+| ----------------- | ------------------------------------------------------------ |
+| Jitter Direction  | The jitter direction of splitting tiles, Horizontal or Vertical. |
+| Interval Type     | The interval mode that glitchy tiles will jitter. Infinite, Periodic or Random. |
+| Frequency         | Using this property to tune the frequency of jittering if you select Periodic or Random for Interval Type, in a range from 0 to 25. |
+| RGB Split         | The offset amount of RGB colors splitting, in a range from 0 to 50. |
+| Speed             | The animation speed of the wave jitter, in a range from 0 to 1. |
+| Amount            | The offset amount of the wave jitter, in a range from 0 to 2. |
+| Custom Resolution | If you want to specify the resolution of the wave jitter, toggle it on. |
+| Resolution        | The custom resolution for the wave jitter. Use it to adjust the density of the wave jitter. |
 
 
 
